@@ -1,10 +1,13 @@
-.aboutass
+.aboutus
+  position: relative
+  overflow: hiden   
   &-us
     display: flex
     margin: 0
     padding: 56px 0 104px
-    overflow: hiden
+    overflow: hiden    
   &-text
+    position: relative
     width: 499px
     margin: 0
     &-titel
@@ -24,7 +27,7 @@
       line-height: 32px;
       margin-bottom: 63px
     &-button
-      padding: 12px 41px 15px 40px
+      padding: 17px 41px 15px 40px
       background-color: $titel-color
       border-radius: 8px
       outline: none
@@ -34,26 +37,42 @@
       font-size: 18px;
       line-height: 25px
       color: $light
+    &-down
+      position: absolute
+      bottom: -110px
+      left: 3px
+      width: 54px
+      height: 56px
+      background-color: $light
+      border-radius: 40px
+      border-color: $titel-color
+      border: solid 2px
+      outline: none
+      cursor: pointer
   &-img
-    position: relative
-    overflow: hiden
-    display: none
+    position: absolute
+    top: 0
+    right: 0
     &-point
       position: absolute
       width: 102px
-      left: 41px
-      top: 107px
+      right: 655px
+      top: 160px
     &-mac
+      max-width: 900px
+      height: 565px
       position: absolute
-      left: -30px
-      top: 6px
+      right: -2px
+      top: 64px
     &-iphone
       width: 217px
-      height: 449px
+      height: 444px
       position: absolute
-      top: 148px
-      left: 68px
+      top: 207px
+      right: 505px
       z-index: 100
+    &-oval
+      width: 540px
 .small
   font-size: 36px
   margin-top: 3px
