@@ -22,9 +22,9 @@
           </div>
           <!-- logo/ -->
           <ul class="header-top__buttons">
-            <li class="button">Домой</li>
+            <li class="button button-mobile-hidden">Домой</li>
             <!-- /.button-menu -->
-            <li class="button button-down">
+            <li class="button button-mobile-hidden button-down">
               Лэндинги
               <img
                 src="img/header/down.svg"
@@ -33,7 +33,7 @@
               />
             </li>
             <!-- /.button-menu -->
-            <li class="button button-down">
+            <li class="button button-mobile-hidden button-down">
               Страницы
               <img
                 src="img/header/down.svg"
@@ -42,15 +42,57 @@
               />
             </li>
             <!-- /.button-menu -->
-            <li class="button">Помощь</li>
+            <li class="button button-mobile-hidden">Помощь</li>
             <!-- /.button-menu -->
           </ul>
           <!-- /.header-top__butoons -->
           <div class="header-top__learn">
-            <button class="button-learn">Получить</button>
+            <button class="button-learn button-learn-mobile-hidden">
+              Получить
+            </button>
             <!-- /.button-menu -->
+            <button class="menu-button header-button__menu-button">
+              <span class="menu-button__line"></span>
+              <span class="menu-button__line"></span>
+              <span class="menu-button__line"></span>
+            </button>
           </div>
           <!-- /.header-top__learn -->
+          <div class="header-button">
+            <div class="container">
+              <ul class="header-button__buttons header-button__buttons-visible">
+                <li class="button button-mobile-visible">Домой</li>
+                <!-- /.button-menu -->
+                <li class="button button-mobile-visible button-down">
+                  Лэндинги
+                  <img
+                    src="img/header/down.svg"
+                    alt="down"
+                    class="button-down__img"
+                  />
+                </li>
+                <!-- /.button-menu -->
+                <li class="button button-mobile-visible button-down">
+                  Страницы
+                  <img
+                    src="img/header/down.svg"
+                    alt="down"
+                    class="button-down__img"
+                  />
+                </li>
+                <!-- /.button-menu -->
+                <li class="button button-mobile-visible">Помощь</li>
+                <!-- /.button-menu -->
+              </ul>
+              <!-- /.header-top__butoons -->
+              <div class="header-top__learn">
+                <button class="button-learn button-learn-mobile-visible">
+                  Получить
+                </button>
+                <!-- /.button-menu -->
+              </div>
+            </div>
+          </div>
         </div>
         <!-- /.header-top -->
       </div>
@@ -71,7 +113,7 @@
               времени без риска или накладных расходов на управление
             </p>
             <!-- /.aboutass-text-text -->
-            <button class="aboutus-text-button">Наше портфолио</button>
+            <button class="aboutus-text-button">Наше&nbsp;портфолио</button>
             <button class="aboutus-text-down">
               <img src="img/about/Icon_down.svg" alt="Arrow to down" />
             </button>
@@ -99,5 +141,54 @@
       <!-- /.container -->
     </section>
     <!-- /.aboutass -->
+    <section class="ourpartners">
+      <div class="container">
+        <h3 class="ourpartners-title">Наши партнеры</h3>
+        <div class="ourpartners-block">
+          <h2 class="ourpartners-describ">
+            Мы работали с ними,<br />
+            Мы доверяем друг другу
+          </h2>
+          <p class="ourpartners-text">
+            Наша команда предоставляет творческое образование высокого уровня
+            для глобальной аудитории студентов, преподавателей и
+            предпринимателей со всего мира.
+          </p>
+        </div>
+        <div class="ourpartners-image">
+          <a
+            href="https://slack.com/intl/en-pl/"
+            target="_blank"
+            class="ourpartners-image-logo"
+            ><img src="img/ourpartners/slack.svg" alt="Icon:Slack"
+          /></a>
+          <a
+            href="https://www.netflix.com/"
+            target="_blank"
+            class="ourpartners-image-logo"
+            ><img src="img/ourpartners/netflix.svg" alt="Icon:Netflix"
+          /></a>
+          <a
+            href="https://www.fitbit.com/"
+            target="_blank"
+            class="ourpartners-image-logo"
+            ><img src="img/ourpartners/fitbit.svg" alt="Icon:Fitbit"
+          /></a>
+          <a
+            href="https://www.google.com/"
+            target="_blank"
+            class="ourpartners-image-logo"
+            ><img src="img/ourpartners/google.svg" alt="Icon:Google"
+          /></a>
+          <a
+            href="https://ru.airbnb.com/"
+            target="_blank"
+            class="ourpartners-image-logo logo5"
+            ><img src="img/ourpartners/airbnb.svg" alt="Icon:Airbnb"
+          /></a>
+        </div>
+      </div>
+    </section>
+    <!-- /.ourpartners -->
   </body>
 </html>

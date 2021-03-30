@@ -5,8 +5,7 @@
     align-items: center
     justify-content: space-between
     padding-top: 39px
-    padding-bottom: 20px
-    &__logo
+    padding-bottom: 20px  
     &__buttons
       width: 423px
       display: flex
@@ -16,6 +15,11 @@
     &__learn
       margin-left: 47px
       margin-right: -5px
+  &-button
+    display: none
+    &__buttons
+      &-visible
+        display: none
 .button
   list-style-type: none
   font-style: normal
@@ -41,3 +45,9 @@
     line-height: 22px;
     outline: none
     cursor: pointer
+    &-mobile
+      &-visible
+        display: none
+.menu
+  &-button
+    display: none
