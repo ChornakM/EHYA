@@ -23,10 +23,13 @@
   &-links
     margin: auto
     display: flex
-    width: 1082px
+    width: 1087px
     justify-content: space-between
   &-link
     width: 263px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     text-align: center
     &-snear
       margin: 0 0 32px 0
@@ -34,7 +37,7 @@
       border-radius: 16px
       cursor: pointer
     &-name
-      margin: 0 0 12px 0
+      margin: 0 0 12px 9px
       font-family: Roboto
       font-style: normal
       font-weight: bold
@@ -44,12 +47,14 @@
       letter-spacing: 0.2px
       color: $titel-color
     &-text
-      margin: 0 0 23px 0
-      font-style: normal
-      font-weight: normal
-      font-size: 16px
-      line-height: 24px
+      width: 255px
+      margin: 0 0 23px 4px
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
     &-button 
+      margin: 0 0 0px 8px
       background-color: $light
       border: none      
       outline: none

@@ -24,11 +24,17 @@
     position: relative
     display: flex
     justify-content: space-between
-    &-section
+    &-image
+      border-radius: 8px 8px 0 0
+    &-text
+      margin: -3px 0 0 0
       width: 360px
       border: 1px solid #DDE6F4
-      border-radius: 8px
+      border-radius: 0 0 8px 8px 
       overflow: hidden
+    &-section      
+      &-project4
+        display: none
     &-descr
       margin: 0
       font-style: normal;
@@ -46,7 +52,7 @@
       line-height: 40px;
       letter-spacing: 0.2px;
       color: $titel-color
-      padding: 19px 0 22px 22px
+      padding: 19px 0 22px 22px    
   &-button
     position: absolute
     top: -68px
