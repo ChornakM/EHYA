@@ -21,6 +21,9 @@
       width: 100%
     &-image
       width: 100%
+  .what
+    &-describ
+      flex-wrap: wrap
 @media (max-width: 960px)
   .container,
     max-width: 730px
@@ -86,6 +89,10 @@
         background-color: #000
   .logo5
     display: none
+  .what
+    &-doing
+      &-box
+        width: 48%
 @media ( max-width: 560px)
   .container
     width: 95%
@@ -124,6 +131,7 @@
     line-height: 36px    
   .ourpartners
     padding-top: 44px
+    padding-bottom: 69px
     &-title
       padding-left: 31px
       text-align: center
@@ -145,6 +153,61 @@
       padding: 0 23px
       &-logo
         padding: 0 12px 21px 10px
+  .what
+    padding-top: 7px 
+    &-describ
+      margin-bottom: 10px
+      &-titel
+        font-size: 28px
+        line-height: 36px
+        width: 300px
+        text-align: center
+        margin-bottom: 15px
+      &-text
+        text-align: center
+        font-size: 16px
+        line-height: 28px
+    &-doing
+      &-titel
+        &-branding
+          margin-bottom: 0
+        &-development
+          margin-bottom: -2px
+        &-micro
+          margin: 15px 0 5px 0
+        &-social
+          margin: 0
+        &-design
+          margin: -2px 0 -1px -6px
+        &-study
+          margin: 0
+      &-box
+        width: 90%
+        display: flex
+        flex-wrap: wrap
+        margin-left: 11px
+        margin-bottom: 7px
+        height: 197px
+        &-img
+          margin: 18px 19px 0 26px
+        &-text
+          width: 85%
+          margin: 0 0 0 20px
+  .card1
+    padding-bottom: 29px
+    order: 1
+  .card2
+    padding-bottom: 3px
+    order: 2
+  .card3    
+    order: 5
+  .card4
+    padding-bottom: 43px
+    order: 3
+  .card5
+    order: 4
+  .card6
+    order: 6
 @media ( max-width: 320px) 
   .container
     width: 95%
