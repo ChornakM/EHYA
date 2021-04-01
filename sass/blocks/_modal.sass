@@ -1,0 +1,92 @@
+.lock
+    overflow: hidden
+.modal
+  &__logo
+    position: absolute
+    left: 18px
+    top: 13px
+    width: 90px
+  &__overlay 
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background-color: #000
+    opacity: 0.4
+    z-index: 1
+    display: none
+  &__dialog
+    position: fixed
+    top: 50%
+    left: 50%
+    padding: 31px 88px 25px 88px
+    width: 478px 
+    max-height: 487px
+    height: 81%
+    background-color: $titel-color
+    color: $light
+    transform: translate(-50%, -50%)
+    border-radius: 8px
+    z-index: 106 
+    transition: opacity 0.2s
+    overflow-y: auto
+    display: none
+
+  &__close
+    position: absolute
+    right: 18px
+    top: 17px
+    text-decoration: none
+    cursor: pointer
+  &__titel
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    margin: 0 0 1px 0
+    text-transform: uppercase
+    text-align: center
+  &__input
+    max-width: 539px    
+    min-height: 50px
+    width: 100%
+    margin-top: 14px
+  &__message
+    max-width: 539px    
+    max-height: 123px
+    flex-basis: 100%
+    margin-bottom: 21px
+    resize: none
+    width: 100%
+    max-height: 123px
+    margin-top: 14px
+    margin-bottom: 12px
+    resize: none;
+  &__button
+    margin: 0 auto
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px;
+    text-align: center
+    color: #0D2436
+    border: none      
+    outline: none
+    overflow: hidden
+    padding: 13px 52px 13px 52px
+    border-radius: 12px
+    cursor: pointer
+  &__info
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+.info
+    display: flex
+    justify-content: space-between
+    align-items: center
+.visible
+  display: flex
+.nonevisible
+  display: none

@@ -150,10 +150,12 @@
       outline: none
       margin-right: 28px
       margin-bottom: 3px
+      z-index: 5
       &__line
         width: 22px
         height: 2px
         background-color: #000
+        z-index: 5
   .logo5
     display: none
   .what
@@ -164,8 +166,21 @@
   .container
     width: 95%
   .aboutus
+    overflow: visible
     &-us
-      flex-direction: column    
+      flex-direction: column  
+    &-img 
+      width: 100%
+      overflow: hidden
+      &-mac
+        width: 500px
+        left: 28px
+      &-iphone
+        left: 0
+        bottom: 0          
+      &-oval
+        position: relative
+        left: 10px 
   .small
     font-size: 30px;
     line-height: 36px    

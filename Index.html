@@ -40,6 +40,11 @@
                 alt="down"
                 class="button-down__img"
               />
+              <ul class="drop-down">
+                <li class="drop-down-item">галерея</li>
+                <li class="drop-down-item">портфолио</li>
+                <li class="drop-down-item">партнери</li>
+              </ul>
             </li>
             <!-- /.button-menu -->
             <li class="button button-mobile-hidden">Помощь</li>
@@ -81,12 +86,16 @@
                   />
                 </li>
                 <!-- /.button-menu -->
-                <li class="button button-mobile-visible">Помощь</li>
+                <li class="button button-mobile-visible button-learn">
+                  Помощь
+                </li>
                 <!-- /.button-menu -->
               </ul>
               <!-- /.header-top__butoons -->
               <div class="header-top__learn">
-                <button class="button-learn button-learn-mobile-visible">
+                <button
+                  class="button-learn button-learn-mobile-visible buttonmail"
+                >
                   Получить
                 </button>
                 <!-- /.button-menu -->
@@ -738,5 +747,146 @@
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
+    <div class="overlay"></div>
+    <div class="burger-menu">
+      <img src="img/footer/Logo.svg" alt="logo" class="burger-menu-logo" />
+      <ul class="burger-menu-ul">
+        <li class="burger-menu-item">
+          <a href="#" class="burger-menu-link">Домой </a>
+        </li>
+        <li class="burger-menu-item">
+          <a href="#" class="burger-menu-link">Лэндинги </a>
+        </li>
+        <li class="burger-menu-item">
+          <a href="#" class="burger-menu-link">Страницы</a>
+        </li>
+        <li class="burger-menu-item">
+          <a href="#" class="burger-menu-link">Помощь</a>
+        </li>
+      </ul>
+      <button class="burger-menu-button button__mail">Получить</button>
+      <div class="line"></div>
+      <div class="burger-menu-socials">
+        <a
+          href="https://www.google.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/google.svg"
+            alt="Icon:Google"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://twitter.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/twitter.svg"
+            alt="Icon: Twitter"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/instagram.svg"
+            alt="Icon: Instagram"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/linkedin.svg"
+            alt="Icon:linkedin"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/"
+          class="burger-menu-link"
+          target="_blank"
+        >
+          <img
+            src="img/footer/youtube.svg"
+            alt="Icon:Youtube"
+            class="burger-menu-icon"
+          />
+        </a>
+      </div>
+      <!-- /.footer-logo-icons -->
+    </div>
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <a href="index.html" class="modal__logo"
+        ><img src="img/footer/Logo.svg" alt="logo"
+      /></a>
+      <img src="img/lets/cloose.svg" alt="Icon: Close" class="modal__close" />
+      <div class="modal__contact-form">
+        <h3 class="modal__titel">Пообщаемся?</h3>
+        <form action="send.php" method="POST" class="modal__foorm form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Ваше полное имя*"
+            name="name"
+            required
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal__input"
+            placeholder="Номер телефона*"
+            name="phone"
+            required
+            id="phonex"
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            name="email"
+            required
+          />
+          <textarea
+            class="message modal__message"
+            cols="30"
+            rows="10"
+            placeholder="Отправьте нам свой бриф и расскажите о своем проекте.* "
+            name="message"
+          ></textarea>
+          <div class="info">
+            <button class="modal__button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal__mail">
+      <img
+        src="img/lets/cloose.svg"
+        alt="Icon: Close"
+        class="modal__mail--close"
+      />
+      <form action="send.php" method="POST" class="modal__email form">
+        <input
+          type="email"
+          class="input modal__input"
+          placeholder="Email*"
+          name="email"
+          required
+        />
+        <button class="modal__button">Отправить</button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

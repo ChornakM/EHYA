@@ -21,6 +21,7 @@
       &-visible
         display: none
 .button
+  position: relative
   list-style-type: none
   font-style: normal
   font-weight: 600
@@ -39,10 +40,10 @@
     color: $blue
     border-color: $blue
     border-radius: 8px
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
     outline: none
     cursor: pointer
     &-mobile
@@ -51,3 +52,8 @@
 .menu
   &-button
     display: none
+.drop-down  
+    position: absolute
+    display: none
+.dropdownactive
+  display: block
