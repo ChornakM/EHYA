@@ -334,3 +334,34 @@ const runSlider = (sliderSettings) => {
 };
 
 runSlider(portfolioSlider);
+
+$(".form").each(function () {
+  $(this).validate({
+    errorClass: "invalid",
+    rules: {
+      phone: {
+        required: true,
+        minlength: 16,
+        maxlength: 16,
+      },
+    },
+    messages: {
+      name: {
+        required: "Пожалуйста, введите Ваше имя",
+        minlength: "Имя должно состоять не менее чем из 2 букв.",
+      },
+      email: {
+        required:
+          "Нам нужен ваш адрес электронной почты, чтобы с вами связаться",
+        email:
+          "Ваш адрес электронной почты должен быть в формате name@domain.com.",
+      },
+      phone: {
+        required: "Телефон деактивирован",
+        minlenght: jQuery.validator.format("Требуется не менее 11 символов"),
+      },
+    },
+  });
+}),
+  $("#phone").mask("+7(999) 999-9999"),
+  $("#phonex").mask("+7(999) 999-9999");
