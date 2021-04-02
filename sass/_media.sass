@@ -4,7 +4,7 @@
   .header
     &-top
       padding-top: 20px
-      &__buttons
+      &-buttons
         margin-left: 267px
   .aboutus
     &-img
@@ -38,12 +38,27 @@
       width: 225px
       &-text
         width: 100%
+  .footer
+    padding: 50px 0 50px
+    &-wrapper
+      width: 100%
+      flex-direction: column
+      margin: 0
+    &-ul
+      width: 100%
+    &-logo
+      margin-top: 30px
+      width: 100%
+      align-items: center
+      order: 2
+    &-like
+      display: none
 @media (max-width: 960px)
   .container,
     max-width: 730px
   .header
     &-top
-      &__buttons
+      &-buttons
         margin-left: 90px
   .aboutus
     &-us 
@@ -53,8 +68,6 @@
       width: 310px
       &-text
         width: 100%
-      &-down
-        display: none
     &-img
       &-mac
         top: 100px
@@ -99,20 +112,35 @@
       &-section
         width: 49%
   .social
-    padding: 30px 0 50px
+    padding-top: 60px
+    &-titel
+      font-size: 14px
+      line-height: 19px
+    &-text 
+      font-size: 28px
+      line-height: 36px
+      margin-bottom: 30px
+    &-links
+      flex-wrap: wrap
     &-link
-      &-snear
-        &-tw
-          margin-bottom: 18px
+      margin-top: 32px  
+      width: 40%
   .letstalk
     padding: 50px 0 50px
   .footer
-    padding: 50px 0 50px
+    &-ul
+      flex-wrap: wrap
+      padding: 50px 0 30px
+    &-list
+      padding-left: 50px
+      margin-bottom: 20px
+      width: 49%
     &-wrapper
       width: 100%
       flex-direction: column
       margin: 0
     &-logo
+      margin: 0
       margin-top: 30px
       width: 100%
       align-items: center
@@ -124,7 +152,7 @@
     max-width: 94%
   .header
     &-top
-      &__buttons
+      &-buttons
         display: none
   .button
     &-mobile
@@ -149,7 +177,7 @@
       margin-right: 28px
       margin-bottom: 3px
       z-index: 5
-      &__line
+      &-line
         width: 22px
         height: 2px
         background-color: #000
@@ -160,6 +188,14 @@
     &-doing
       &-box
         width: 48%
+  .feedback
+    &-card
+      width: 90%
+    &-button
+      &-left
+        left: -10px
+      &-right
+        right: 37px
 @media ( max-width: 560px)
   .container
     width: 95%
@@ -167,6 +203,27 @@
     overflow: visible
     &-us
       flex-direction: column  
+    &-text
+      width: 100%
+      text-align: center
+      &-down
+        left: 225px
+        bottom: -600px
+      &-titel
+        width: 92%
+        font-size: 30px
+        line-height: 36px
+        margin-bottom: 8px
+      &-text 
+        width: 92%
+        font-size: 16px
+        line-height: 28px
+        margin-bottom: 11px
+      &-button
+        padding: 11px 35px 13px 37px
+        margin: 7px 25px 0 0
+        font-size: 16px
+        line-height: 22px
     &-img 
       width: 100%
       overflow: hidden
@@ -275,10 +332,13 @@
       line-height: 36px
       text-align: center
     &-slider
+      justify-content: center
+      flex-wrap: wrap
       &-image
         width: 100%
       &-section
-        width: 100%
+        width: 80%
+        margin-bottom: 30px
     &-button 
       display: none
   .feedback
@@ -297,20 +357,10 @@
         display: none
     &-button
       top: 110%
-      right: 45%
-  .social
-    padding-top: 60px
-    &-titel
-      font-size: 14px
-      line-height: 19px
-    &-text 
-      font-size: 28px
-      line-height: 36px
-      margin-bottom: 30px
-    &-links
-      flex-wrap: wrap
-    &-link
-      margin-top: 32px  
+      &-left 
+        left: 10%
+      &-righy
+        right: 30%
   .letstalk
     &-titel
       font-size: 28px
@@ -326,6 +376,7 @@
       width: 100%
       flex-wrap: wrap
     &-list
+      padding: 0
       margin-bottom: 39px
       width: 49%
       &-titel
@@ -342,44 +393,105 @@
     width: 95%
   .aboutus
     &-us
+      padding-bottom: 0
     &-text
       text-align: center
       &-titel
         width: 92%
         font-size: 30px
         line-height: 36px
-        margin-bottom: 8px
+        margin-bottom: -1px
       &-text 
         width: 92%
         font-size: 16px
         line-height: 28px
         margin-bottom: 11px
+        margin-top: 10px
       &-button
         padding: 11px 35px 13px 37px
         margin: 7px 25px 0 0
         font-size: 16px
         line-height: 22px
+      &-down
+        width: 48px
+        height: 48px
+        left: 115px
+        bottom: -367px
     &-img
       &-mac
         width: 356px
         height: 241px
-        left: -49px
-        top: 44px
+        left: -53px
+        top: 47px
       &-iphone
         width: 105px
         height: 194px
         top: 99px
         left: -53px
+      &-oval
+        width: 290px
+        left: 83px
+  .ourpartners
+    padding-top: 29px
+    &-title
+      margin-right: -12px
+    &-describ
+      margin-right:  13px
+    &-text
+      margin-left: -8px
+    &-image
+      margin-left: -9px
   .small
     margin: 0
+    width: 92%
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+  .what
+    &-describ
+      &-titel
+        margin-left: -13px
+        margin-top: -1px
+      &-text
+        margin-left: -7px
+        margin-right: 8px
+        margin-bottom: -4px
+    &-doing
+      &-box
+        margin-left: 0
+        width: 94%
+        &-img 
+          margin: 20px 0px 0px 28px 
+        &-text
+          margin-left: 25px
+      &-titel
+        font-size: 20px;
+        line-height: 24px;
+      &-text 
+        margin-top: 8px
+  .card1
+    padding-bottom: 19px
+  .card2
+    padding-bottom: 0
+  .card3
+    padding-top: 1px
+    padding-bottom: 0px
+    padding-right: 27px
+  .card4
+    padding-bottom: 38px
+  .card6
+    padding-bottom: 0px
   .portfolio
     padding: 44px 0 10px
     &-titel
-      margin-left: 10px
+      margin-left: -2px
     &-text
+      margin-right: 15px
       margin-bottom: 33px
     &-slider
-      justify-content: center
+      justify-content: start
       flex-wrap: wrap
       &-descr
         padding: 17px 0 0 0
@@ -393,7 +505,7 @@
       &-image
         height: 302px
       &-section
-        width: 90%
+        width: 93%
         height: 410px
         margin-bottom: 14px
         &-project2
@@ -407,14 +519,15 @@
   .feedback
     padding: 27px 0 50px
     &-titel
-      margin-left: -11px
+      margin-left: -29px
       margin-bottom: 24px
     &-text
+      margin-right: 15px
       margin-bottom: 70px
     &-slider
       width: 97%
     &-card
-      padding: 24px 7px 17px 12px
+      padding: 20px 20px 20px 9px
       text-align: center
     &-user
       justify-content: center
@@ -434,15 +547,20 @@
         line-height: 22px
     &-button 
       top: 106.5%
-      right: 41.5%
   .social
-    padding: 95px 0 52px 0 
+    padding: 95px 0 53px 0 
     &-titel
-      margin: 0 0 22px 0
+      margin: -3px 12px 22px 0
     &-text
       margin: 0 0 0 -6px
     &-link
-      width: 49%
+      margin-left: 0
+    &-link
+      width: 44%
+      &-tw
+        margin-right: 17px
+      &-you  
+        margin-right: 17px
       &-snear
         width: 48px
         margin: 0 0 12px 0
@@ -483,21 +601,22 @@
   .letstalk
     padding: 66px 0 64px 
     &-titel
-      margin: -2px 4px 33px 0
+      margin: -2px 18px 33px 0
     &-text
       width: 93%      
-      margin: 0 0 11px 0
+      margin: 0 15px 11px 0
     &-button
-      margin: 0 4px 0 0
+      margin: 0 18px 0 0
       padding: 13px 25px 13px 23px
   .footer
-    padding: 47px 0 50px 0
+    padding: 0px 0 50px 0
     &-ul
       justify-content: center
+      padding-bottom: 0
     &-list
-      width: 48%
-      margin-right: -7px
-      margin-left: 5px
+      width: 50%
+      margin-right: 
+      margin-left: 
       margin-bottom: 25px
       &-titel
         margin-bottom: 20px
@@ -505,7 +624,7 @@
         margin: 0 0 15px 0
         width: 70% 
     &-logo
-      margin: 7px 0 0 0
+      margin: 4px 0 0 -7px
       &-img
         width: 77px
         margin-bottom: 13px

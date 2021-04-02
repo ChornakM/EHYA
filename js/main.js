@@ -2,17 +2,67 @@ const triggerMenu = document.querySelector(".menu-button");
 const overlay = document.querySelector(".overlay");
 const burgerMenu = document.querySelector(".burger-menu");
 const openModal = document.querySelector(".letstalk-button");
-const windowModal = document.querySelector(".modal__dialog");
-const windowClosse = document.querySelector(".modal__close");
-const overlayModal = document.querySelector(".modal__overlay");
+const windowModal = document.querySelector(".modal-dialog");
+const windowClosse = document.querySelector(".modal-close");
+const overlayModal = document.querySelector(".modal-overlay");
 const receive = document.querySelector(".button-learn");
-const mail = document.querySelector(".modal__mail");
-const mailClosses = document.querySelector(".modal__mail--close");
+const mail = document.querySelector(".modal-mail");
+const mailClosses = document.querySelector(".modal-mail-close");
 const body = document.querySelector("body");
 const partners = document.querySelector(".ourpartners");
 const downArrow = document.querySelector(".aboutus-text-down");
-const navMenu = document.querySelector(".header-top__buttons");
+const navMenu = document.querySelector(".header-top-buttons");
 const dropdown = document.querySelector(".drop-down");
+const dropdowns = document.querySelector(".drop-downs");
+const dropdownsMob = document.querySelector(".drop-down-mob");
+const burgersMenu = document.querySelector(".burger-menu");
+const dropdownMob = document.querySelector(".drop-down-mob");
+const dropdownMobs = document.querySelector(".drop-down-mobs");
+const ourPortfolio = document.querySelector(".aboutus-text-button");
+const portfolioSection = document.querySelector(".portfolio");
+const burgerReceive = document.querySelector(".burger-menu-button");
+
+burgerReceive.addEventListener("click", (e) => {
+  mail.classList.toggle("openmail");
+  body.classList.toggle("lock");
+});
+
+ourPortfolio.addEventListener("click", () => {
+  portfolioSection.scrollIntoView({ behavior: "smooth" });
+});
+
+burgersMenu.addEventListener("click", (e) => {
+  const liMo = e.target.closest(".burger-menu-ul");
+  const content = e.target.firstChild.textContent.trim();
+  if (liMo && content === "Лэндинги") {
+    dropdownMobs.classList.toggle("dropdownmobAs");
+  }
+});
+
+burgersMenu.addEventListener("click", (e) => {
+  const liMo = e.target.closest(".burger-menu-ul");
+  const content = e.target.firstChild.textContent.trim();
+  if (liMo && content === "Страницы") {
+    dropdownMob.classList.toggle("dropdownmobA");
+  }
+
+  if (e.target.closest(".drop-down-item")) {
+    dropdownMob.classList.remove("dropdownmobA");
+  }
+});
+
+navMenu.addEventListener("click", (e) => {
+  const liM = e.target.closest(".button-mobile-hidden");
+  const content = e.target.firstChild.textContent.trim();
+  console.log(content);
+  if (liM && content === "Страницы") {
+    dropdownsMob.classList.toggle("dropdownactive");
+  }
+
+  if (e.target.closest(".drop-down-item")) {
+    dropdownsMob.classList.remove("dropdownactive");
+  }
+});
 
 navMenu.addEventListener("click", (e) => {
   const li = e.target.closest(".button-mobile-hidden");
@@ -20,8 +70,21 @@ navMenu.addEventListener("click", (e) => {
   if (li && content === "Страницы") {
     dropdown.classList.toggle("dropdownactive");
   }
+
   if (e.target.closest(".drop-down-item")) {
     dropdown.classList.remove("dropdownactive");
+  }
+});
+
+navMenu.addEventListener("click", (e) => {
+  const lii = e.target.closest(".button-mobile-hidden");
+  const content = e.target.firstChild.textContent.trim();
+  if (lii && content === "Лэндинги") {
+    dropdowns.classList.toggle("dropdowsnactive");
+  }
+
+  if (e.target.closest(".drop-down-item")) {
+    dropdowns.classList.remove("dropdowsnactive");
   }
 });
 
@@ -62,162 +125,212 @@ overlay.addEventListener("click", (event) => {
   console.log("asgerg");
 });
 
-const slider = document.querySelector(".feedback-slider");
-const slides = document.querySelectorAll(".feedback-card");
-const leftArrow = document.querySelector(".feedback-button-left");
-const rightArrow = document.querySelector(".feedback-button-right");
-const arrowsContainer = document.querySelector(".feedback-sliders");
-
-let slideNumber = 0;
-leftArrow.style.display = "none";
-
-slides.forEach((slide, index) => {
-  if (index > 1) {
-    slide.style.display = "none";
-  }
-});
-
-const switchSlide = (showSlides, slide) => {
-  if (slide <= 0) {
-    leftArrow.style.display = "none";
-  } else {
-    leftArrow.style.display = "";
-  }
-
-  let numbSlides = showSlides == 1 ? 3 : 2;
-  console.log(numbSlides);
-  if (slide >= numbSlides) {
-    rightArrow.style.display = "none";
-  } else {
-    rightArrow.style.display = "";
-  }
-
-  const slideNumber = slide;
-
-  slides.forEach((slide) => (slide.style.display = "none"));
-
-  slides.forEach((slide, index) => {
-    if (showSlides == 2) {
-      if (index >= slideNumber && index <= slideNumber + 1) {
-        slide.style.display = "block";
-      }
-    }
-    if (showSlides == 1) {
-      if (index == slideNumber) {
-        slide.style.display = "block";
-      }
-    }
-  });
+const feedbackSlider = {
+  sliderClass: ".feedback-sliders",
+  slidesClass: ".feedback-card",
+  leftArrowClass: ".feedback-button-left",
+  rightArrowClass: ".feedback-button-right",
+  sizeL: 2,
+  sizeM: 1,
 };
 
-arrowsContainer.addEventListener("click", ({ target }) => {
-  let showSlides;
-  const windowWidth = document.documentElement.clientWidth;
-  if (windowWidth > 560) {
-    showSlides = 2;
-  } else if (windowWidth > 300 && windowWidth <= 560) {
-    showSlides = 1;
-  }
+const runFeedbackSlider = (sliderSettings) => {
+  const {
+    sliderClass,
+    slidesClass,
+    leftArrowClass,
+    rightArrowClass,
+  } = sliderSettings;
 
-  if (target.closest(".feedback-button-left")) {
-    slideNumber--;
-    switchSlide(showSlides, slideNumber);
-  }
+  const slider = document.querySelector(sliderClass);
+  const slides = document.querySelectorAll(slidesClass);
+  const leftArrow = document.querySelector(leftArrowClass);
+  const rightArrow = document.querySelector(rightArrowClass);
+  const slidesAmount = slides.length;
+  let slideIndex = 0;
 
-  if (target.closest(".feedback-button-right")) {
-    slideNumber++;
-    switchSlide(showSlides, slideNumber);
-  }
-});
+  leftArrow.style.display = "none";
 
-const sliderPortfolio = document.querySelector(".portfolio-slider");
-const slidesPortfolio = document.querySelectorAll(".portfolio-slider-section");
-const leftArrowPortfolio = document.querySelector(".portfolio-button-left");
-const rightArrowPortfolio = document.querySelector(".portfolio-button-right");
+  const slidesToShow = ({ sizeL, sizeM }) => {
+    let showSlides;
+    const windowWidth = document.documentElement.clientWidth;
 
-let slideNumberPortfolio = 0;
-leftArrow.disabled = true;
+    if (windowWidth > 768) showSlides = sizeL;
+    if (windowWidth <= 768) showSlides = sizeM;
 
-slidesPortfolio.forEach((slide, index) => {
-  if (index > 2) {
-    slide.style.display = "none";
-  }
-});
+    return +showSlides;
+  };
 
-const switchSlidePortfolio = (showSlides, slide) => {
-  if (slide <= 0) {
-    leftArrowPortfolio.disabled = true;
-  } else {
-    leftArrowPortfolio.disabled = false;
-  }
+  const showDefaultNumberSlides = (slides) => {
+    slides.forEach((slide, index) => {
+      index > slidesToShow(sliderSettings) - 1
+        ? (slide.style.display = "none")
+        : (slide.style.display = "block");
+    });
+  };
 
-  let numbSlides = showSlides == 1 ? 3 : 2;
-  console.log(numbSlides);
-  if (slide >= numbSlides) {
-    rightArrowPortfolio.disabled = true;
-  } else {
-    rightArrowPortfolio.disabled = false;
-  }
-
-  const slideNumber = slide;
-
-  slidesPortfolio.forEach((slide) => (slide.style.display = "none"));
-
-  slidesPortfolio.forEach((slide, index) => {
-    if (showSlides == 2) {
-      if (index >= slideNumber && index <= slideNumber + 1) {
-        slide.style.display = "block";
-      }
-    }
-    if (showSlides == 1) {
-      if (index == slideNumber) {
-        slide.style.display = "block";
-      }
-    }
-  });
-};
-
-const numofSlides = () => {
-  let showSlides;
-  const windowWidth = document.documentElement.clientWidth;
-  if (windowWidth > 960) {
-    showSlides = 3;
-  }
-  if (windowWidth > 560 && windowWidth <= 960) {
-    showSlides = 2;
-  } else if (windowWidth > 300 && windowWidth <= 560) {
-    showSlides = 1;
-  }
-  return showSlides;
-};
-sliderPortfolio.addEventListener("click", ({ target }) => {
-  const showSlides = numofSlides();
-
-  if (target.closest(".feedback-button-left")) {
-    slideNumberPortfolio--;
-    switchSlide(showSlides, slideNumber);
-  }
-
-  if (target.closest(".feedback-button-right")) {
-    slideNumberPortfolio++;
-    switchSlide(showSlides, slideNumber);
-  }
-});
-
-const defaultSlides = () => {
-  slidesPortfolio.forEach((slide, index) => {
-    slide.style.display = "none";
-  });
-  const showSlides = numofSlides;
-  slidesPortfolio.forEach((slide, index) =>
-    index < showSlides
-      ? (slide.style.display = "block")
-      : (slide.style.display = "none")
-  );
-};
-
-(function () {
   window.addEventListener("resize", () => {
-    defaultSlides();
+    leftArrow.style.display = "none";
+    rightArrow.style.display = "";
+
+    slideIndex = 0;
+    showDefaultNumberSlides(slides);
+    console.log(document.documentElement.clientWidth);
   });
-})();
+
+  showDefaultNumberSlides(slides);
+
+  const sliderLimitations = (slide, mode) => {
+    const maxSlideIndex = slidesAmount - slidesToShow(sliderSettings);
+
+    if (slide <= 0) {
+      leftArrow.style.display = "none";
+      slideIndex = 0;
+    } else {
+      leftArrow.style.display = "";
+    }
+
+    if (slide >= maxSlideIndex) {
+      rightArrow.style.display = "none";
+      slideIndex = maxSlideIndex;
+    } else {
+      rightArrow.style.display = "";
+    }
+  };
+
+  const switchSlide = (slideIndex) => {
+    slides.forEach((slide) => (slide.style.display = "none"));
+    const firstSlideIndex = 0 + slideIndex;
+    const lastSlideIndex = firstSlideIndex + slidesToShow(sliderSettings) - 1;
+
+    slides.forEach((slide, index) => {
+      if (index >= firstSlideIndex && index <= lastSlideIndex) {
+        slide.style.display = "block";
+      }
+    });
+  };
+
+  slider.addEventListener("click", ({ target }) => {
+    if (target.closest(leftArrowClass)) {
+      slideIndex--;
+      sliderLimitations(slideIndex);
+      console.log(slideIndex);
+      switchSlide(slideIndex);
+    }
+
+    if (target.closest(rightArrowClass)) {
+      slideIndex++;
+      sliderLimitations(slideIndex);
+      console.log(slideIndex);
+      switchSlide(slideIndex);
+    }
+  });
+};
+runFeedbackSlider(feedbackSlider);
+
+// @ Slides to show:
+// l > 860px; windoWidth = 981
+// m > 560px and m <= 960px; windowWidth = 603
+// s > 300px and m <= 560px;
+const portfolioSlider = {
+  sliderClass: ".portfolio-slider",
+  slidesClass: ".portfolio-slider-section",
+  leftArrowClass: ".portfolio-button-left",
+  rightArrowClass: ".portfolio-button-right",
+  sizeL: 3,
+  sizeM: 2,
+  sizeS: 1,
+};
+
+const runSlider = (sliderSettings) => {
+  const {
+    sliderClass,
+    slidesClass,
+    leftArrowClass,
+    rightArrowClass,
+  } = sliderSettings;
+
+  const slider = document.querySelector(sliderClass);
+  const slides = document.querySelectorAll(slidesClass);
+  const leftArrow = document.querySelector(leftArrowClass);
+  const rightArrow = document.querySelector(rightArrowClass);
+  const slidesAmount = slides.length;
+  let slideIndex = 0;
+
+  const slidesToShow = ({ sizeL, sizeM, sizeS }) => {
+    let showSlides;
+    const windowWidth = document.documentElement.clientWidth;
+
+    if (windowWidth > 980) showSlides = sizeL;
+
+    if (windowWidth > 560 && windowWidth <= 980) showSlides = sizeM;
+    if (windowWidth > 300 && windowWidth <= 560) showSlides = slidesAmount;
+
+    return +showSlides;
+  };
+
+  const showDefaultNumberSlides = (slides) => {
+    slides.forEach((slide, index) => {
+      index > slidesToShow(sliderSettings) - 1
+        ? (slide.style.display = "none")
+        : (slide.style.display = "block");
+    });
+  };
+
+  window.addEventListener("resize", () => {
+    rightArrow.disabled = false;
+    slideIndex = 0;
+    showDefaultNumberSlides(slides);
+    console.log(document.documentElement.clientWidth);
+  });
+
+  showDefaultNumberSlides(slides);
+
+  const sliderLimitations = (slide, mode) => {
+    const maxSlideIndex = slidesAmount - slidesToShow(sliderSettings);
+
+    if (slide <= 0) {
+      leftArrow.disabled = true;
+      slideIndex = 0;
+    } else {
+      leftArrow.disabled = false;
+    }
+
+    if (slide >= maxSlideIndex) {
+      rightArrow.disabled = true;
+      slideIndex = maxSlideIndex;
+    } else {
+      rightArrow.disabled = false;
+    }
+  };
+
+  const switchSlide = (slideIndex) => {
+    slides.forEach((slide) => (slide.style.display = "none"));
+    const firstSlideIndex = 0 + slideIndex;
+    const lastSlideIndex = firstSlideIndex + slidesToShow(sliderSettings) - 1;
+
+    slides.forEach((slide, index) => {
+      if (index >= firstSlideIndex && index <= lastSlideIndex) {
+        slide.style.display = "block";
+      }
+    });
+  };
+
+  slider.addEventListener("click", ({ target }) => {
+    if (target.closest(leftArrowClass)) {
+      slideIndex--;
+      sliderLimitations(slideIndex);
+      console.log(slideIndex);
+      switchSlide(slideIndex);
+    }
+
+    if (target.closest(rightArrowClass)) {
+      slideIndex++;
+      sliderLimitations(slideIndex);
+      console.log(slideIndex);
+      switchSlide(slideIndex);
+    }
+  });
+};
+
+runSlider(portfolioSlider);

@@ -18,11 +18,13 @@
     <header class="header">
       <div class="container">
         <div class="header-top">
-          <div class="header-top__logo">
-            <img src="img/logo/Logo.svg" alt="Logo:EHYA" class="logo" />
+          <div class="header-top-logo">
+            <a href="index.html" class="logo">
+              <img src="img/logo/Logo.svg" alt="Logo:EHYA" class="logo"
+            /></a>
           </div>
           <!-- logo/ -->
-          <ul class="header-top__buttons">
+          <ul class="header-top-buttons">
             <li class="button button-mobile-hidden">Домой</li>
             <!-- /.button-menu -->
             <li class="button button-mobile-hidden button-down">
@@ -30,8 +32,13 @@
               <img
                 src="img/header/down.svg"
                 alt="down"
-                class="button-down__img"
+                class="button-down-img"
               />
+              <ul class="drop-downs">
+                <li class="drop-down-item">Партнери</li>
+                <li class="drop-down-item">Портфолио</li>
+                <li class="drop-down-item">Галерея</li>
+              </ul>
             </li>
             <!-- /.button-menu -->
             <li class="button button-mobile-hidden button-down">
@@ -39,12 +46,12 @@
               <img
                 src="img/header/down.svg"
                 alt="down"
-                class="button-down__img"
+                class="button-down-img"
               />
               <ul class="drop-down">
-                <li class="drop-down-item">галерея</li>
-                <li class="drop-down-item">портфолио</li>
-                <li class="drop-down-item">партнери</li>
+                <li class="drop-down-item">Галерея</li>
+                <li class="drop-down-item">Портфолио</li>
+                <li class="drop-down-item">Партнери</li>
               </ul>
             </li>
             <!-- /.button-menu -->
@@ -52,57 +59,18 @@
             <!-- /.button-menu -->
           </ul>
           <!-- /.header-top__butoons -->
-          <div class="header-top__learn">
+          <div class="header-top-learn">
             <button class="button-learn button-learn-mobile-hidden">
               Получить
             </button>
             <!-- /.button-menu -->
             <button class="menu-button header-button-menu-button">
-              <span class="menu-button__line"></span>
-              <span class="menu-button__line"></span>
-              <span class="menu-button__line"></span>
+              <span class="menu-button-line"></span>
+              <span class="menu-button-line"></span>
+              <span class="menu-button-line"></span>
             </button>
           </div>
           <!-- /.header-top__learn -->
-          <div class="header-button">
-            <div class="container">
-              <ul class="header-button__buttons header-button__buttons-visible">
-                <li class="button button-mobile-visible">Домой</li>
-                <!-- /.button-menu -->
-                <li class="button button-mobile-visible button-down">
-                  Лэндинги
-                  <img
-                    src="img/header/down.svg"
-                    alt="down"
-                    class="button-down__img"
-                  />
-                </li>
-                <!-- /.button-menu -->
-                <li class="button button-mobile-visible button-down">
-                  Страницы
-                  <img
-                    src="img/header/down.svg"
-                    alt="down"
-                    class="button-down__img"
-                  />
-                </li>
-                <!-- /.button-menu -->
-                <li class="button button-mobile-visible button-learn">
-                  Помощь
-                </li>
-                <!-- /.button-menu -->
-              </ul>
-              <!-- /.header-top__butoons -->
-              <div class="header-top__learn">
-                <button
-                  class="button-learn button-learn-mobile-visible buttonmail"
-                >
-                  Получить
-                </button>
-                <!-- /.button-menu -->
-              </div>
-            </div>
-          </div>
         </div>
         <!-- /.header-top -->
       </div>
@@ -112,11 +80,9 @@
       <div class="container">
         <div class="aboutus-us">
           <div class="aboutus-text">
-            <h1 class="aboutus-text-titel">
-              Номер #1,
-              <p class="small">Южная Азия</p>
-              Агенство цифровых продуктов
-            </h1>
+            <h1 class="aboutus-text-titel">Номер #1,</h1>
+            <p class="small">Южная Азия</p>
+            <h2 class="aboutus-text-titel">Агенство цифровых продуктов</h2>
             <!-- /.aboutass-text-titel -->
             <p class="aboutus-text-text">
               Мы даем результаты, помогающие Вам добиться экономии средств и
@@ -535,7 +501,7 @@
             </a>
           </div>
           <!-- social -->
-          <div class="social-link">
+          <div class="social-link social-link-tw">
             <a href="https://twitter.com/" target="_blank">
               <img
                 src="img/social/twitter.svg"
@@ -577,7 +543,7 @@
             </a>
           </div>
           <!-- social -->
-          <div class="social-link">
+          <div class="social-link social-link-you">
             <a href="https://www.youtube.com/" target="_blank">
               <img
                 src="img/social/youtube.svg"
@@ -805,16 +771,32 @@
           <a href="#" class="burger-menu-link">Домой </a>
         </li>
         <li class="burger-menu-item">
-          <a href="#" class="burger-menu-link">Лэндинги </a>
+          <a href="#" class="burger-menu-link"
+            >Лэндинги
+            <img src="img/logo/down2.svg" alt="down2" class="button-down-img"
+          /></a>
+          <ul class="drop-down-mobs">
+            <li class="drop-down-item">Партнери</li>
+            <li class="drop-down-item">Портфолио</li>
+            <li class="drop-down-item">Галерея</li>
+          </ul>
         </li>
         <li class="burger-menu-item">
-          <a href="#" class="burger-menu-link">Страницы</a>
+          <a href="#" class="burger-menu-link"
+            >Страницы
+            <img src="img/logo/down2.svg" alt="down2" class="button-down-img"
+          /></a>
+          <ul class="drop-down-mob">
+            <li class="drop-down-item">Галерея</li>
+            <li class="drop-down-item">Портфолио</li>
+            <li class="drop-down-item">Партнери</li>
+          </ul>
         </li>
         <li class="burger-menu-item">
           <a href="#" class="burger-menu-link">Помощь</a>
         </li>
       </ul>
-      <button class="burger-menu-button button__mail">Получить</button>
+      <button class="burger-menu-button button-mail">Получить</button>
       <div class="line"></div>
       <div class="burger-menu-socials">
         <a
@@ -875,18 +857,18 @@
       </div>
       <!-- /.footer-logo-icons -->
     </div>
-    <div class="modal__overlay"></div>
-    <div class="modal__dialog">
-      <a href="index.html" class="modal__logo"
+    <div class="modal-overlay"></div>
+    <div class="modal-dialog">
+      <a href="index.html" class="modal-logo"
         ><img src="img/footer/Logo.svg" alt="logo"
       /></a>
-      <img src="img/lets/cloose.svg" alt="Icon: Close" class="modal__close" />
-      <div class="modal__contact-form">
-        <h3 class="modal__titel">Пообщаемся?</h3>
-        <form action="send.php" method="POST" class="modal__foorm form">
+      <img src="img/lets/cloose.svg" alt="Icon: Close" class="modal-close" />
+      <div class="modal-contact-form">
+        <h3 class="modal-titel">Пообщаемся?</h3>
+        <form action="send.php" method="POST" class="modal-foorm form">
           <input
             type="text"
-            class="input modal__input"
+            class="input modal-input"
             placeholder="Ваше полное имя*"
             name="name"
             required
@@ -894,7 +876,7 @@
           />
           <input
             type="tel"
-            class="input modal__input"
+            class="input modal-input"
             placeholder="Номер телефона*"
             name="phone"
             required
@@ -902,39 +884,39 @@
           />
           <input
             type="email"
-            class="input modal__input"
+            class="input modal-input"
             placeholder="Email*"
             name="email"
             required
           />
           <textarea
-            class="message modal__message"
+            class="message modal-message"
             cols="30"
             rows="10"
             placeholder="Отправьте нам свой бриф и расскажите о своем проекте.* "
             name="message"
           ></textarea>
           <div class="info">
-            <button class="modal__button">Отправить</button>
+            <button class="modal-button">Отправить</button>
           </div>
         </form>
       </div>
     </div>
-    <div class="modal__mail">
+    <div class="modal-mail">
       <img
         src="img/lets/cloose.svg"
         alt="Icon: Close"
-        class="modal__mail--close"
+        class="modal-mail-close"
       />
-      <form action="send.php" method="POST" class="modal__email form">
+      <form action="send.php" method="POST" class="modal-email form">
         <input
           type="email"
-          class="input modal__input"
+          class="input modal-input"
           placeholder="Email*"
           name="email"
           required
         />
-        <button class="modal__button">Отправить</button>
+        <button class="modal-button">Отправить</button>
       </form>
     </div>
     <script src="js/main.js"></script>

@@ -1,25 +1,26 @@
 .lock
     overflow: hidden
 .modal
-  &__mail
+  &-mail
     position: absolute
-    top: 0
-    right: 0
-    width: 300px
+    top: 15px
+    right: 15px
+    max-width: 320px
     background-color: $titel-color
     padding: 25px
     border-radius: 8px
     overflow: hidden
-    display: none
-    &--close
+    display: none 
+    z-index: 15
+    &-close
       position: absolute
       top: 15px
       right: 15px
       margin-bottom: 15px
-  &__email
+  &-email
     border-radius: 4px
     overflow: hidden
-  &__button
+  &-button
     margin: 10px 0px 0px 0px
     font-style: normal
     font-weight: bold
