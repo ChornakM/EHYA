@@ -64,30 +64,6 @@ navMenu.addEventListener("click", (e) => {
   }
 });
 
-navMenu.addEventListener("click", (e) => {
-  const li = e.target.closest(".button-mobile-hidden");
-  const content = e.target.firstChild.textContent.trim();
-  if (li && content === "Страницы") {
-    dropdown.classList.toggle("dropdownactive");
-  }
-
-  if (e.target.closest(".drop-down-item")) {
-    dropdown.classList.remove("dropdownactive");
-  }
-});
-
-navMenu.addEventListener("click", (e) => {
-  const lii = e.target.closest(".button-mobile-hidden");
-  const content = e.target.firstChild.textContent.trim();
-  if (lii && content === "Лэндинги") {
-    dropdowns.classList.toggle("dropdowsnactive");
-  }
-
-  if (e.target.closest(".drop-down-item")) {
-    dropdowns.classList.remove("dropdowsnactive");
-  }
-});
-
 downArrow.addEventListener("click", () => {
   partners.scrollIntoView({ behavior: "smooth" });
 });
@@ -155,8 +131,8 @@ const runFeedbackSlider = (sliderSettings) => {
     let showSlides;
     const windowWidth = document.documentElement.clientWidth;
 
-    if (windowWidth > 768) showSlides = sizeL;
-    if (windowWidth <= 768) showSlides = sizeM;
+    if (windowWidth > 1200) showSlides = sizeL;
+    if (windowWidth <= 1200) showSlides = sizeM;
 
     return +showSlides;
   };
