@@ -24,7 +24,7 @@ try{
 if (!empty($name) and !empty($phone) and !empty($email) and !empty($message)){
   $title = "Новий проект";
   $body = "
-  <h2>Новый заказ на бронь</h2>
+  <h2>Новый клиент</h2>
   <b>Имя:</b> $name<br>
   <b>Телефон:</b> $phone<br>
   <b>Имейл:</b> $email<br>
@@ -50,11 +50,11 @@ elseif (!empty($name) and !empty($phone) and !empty($message) and empty($email))
 
   //настройки вашей почты
   $mail->Host        ='smtp.mail.ru';
-  $mail->Username    ='m.chornak@mail.ru';
+  $mail->Username    ='mykha1755@mail.ru';
   $mail->Password    ='Mm87655387';
   $mail->SMTPSecure  ='ssl';
   $mail->Port        = 465;
-  $mail->setFrom('m.chornak@mail.ru', 'Миша Чорнак');  
+  $mail->setFrom('mykha1755@mail.ru', 'Mykhailo Chornak');  
 
   $mail->addAddress('chornak17@gmail.com');
 
@@ -87,7 +87,7 @@ require 'phpmailer/Exception.php';
 
 
 //формирование самого письма
-$title = "Новое обращение Best Tour Plan";
+$title = "Ново";
 $body = "
 <h2>Новая подписка на рассылку/h2>
 <b>Имейл:</b> $email<br>
@@ -105,11 +105,11 @@ try{
 
   //настройки вашей почты
   $mail->Host        ='smtp.mail.ru';
-  $mail->Username    ='m.chornak@mail.ru';
+  $mail->Username    ='mykha1755@mail.ru';
   $mail->Password    ='Mm87655387';
   $mail->SMTPSecure  ='ssl';
   $mail->Port        = 465;
-  $mail->setFrom('m.chornak@mail.ru', 'Миша Чорнак');  
+  $mail->setFrom('mykha1755@mail.ru', 'Mykhailo Chornak');  
 
   $mail->addAddress('chornak17@gmail.com');
 
