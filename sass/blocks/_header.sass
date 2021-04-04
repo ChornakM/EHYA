@@ -1,11 +1,19 @@
 .header
+  position: sticky
+  top: 0
+  z-index: 10
   background-color: $body-bgc
   &-top
     display: flex
     align-items: center
     justify-content: space-between
     padding-top: 39px
-    padding-bottom: 20px  
+    padding-bottom: 20px 
+    &-logo
+      &:hover
+        background: #e6e4be
+        padding: 1px
+        border-radius: 4px
     &-buttons
       width: 423px
       display: flex
@@ -30,7 +38,12 @@
   text-align: center
   color: $titel-color
   cursor: pointer
-  padding-right: 6px
+  margin-right: 6px
+  padding-left: 4px
+  &:hover
+    color: $blue
+    background-color: #e6e4be
+    border-radius: 4px
   &-down
   &-downl
     &:hover
@@ -54,6 +67,10 @@
     line-height: 22px
     outline: none
     cursor: pointer
+    &:hover
+      background: $titel-color
+      border: 2px solid $titel-color
+      color: $light
     &-mobile
       &-visible
         display: none
@@ -66,6 +83,8 @@
     position: absolute
     display: none
     z-index: 3
+    background: #ffffff
+    border-radius: 0 0 4px 4px
     &-item
       margin-top: 10px
 .dropdownactive
@@ -76,6 +95,8 @@
     position: absolute
     display: none
     z-index: 3
+    background: #ffffff
+    border-radius: 0 0 4px 4px
     &-item
       margin-top: 10px
 .dropdowsnactive

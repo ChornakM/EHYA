@@ -21,6 +21,7 @@ const dropdownMobs = document.querySelector(".drop-down-mobs");
 const ourPortfolio = document.querySelector(".aboutus-text-button");
 const portfolioSection = document.querySelector(".portfolio");
 const burgerReceive = document.querySelector(".burger-menu-button");
+const closeBurger = document.querySelector(".burger-iclose");
 
 burgerReceive.addEventListener("click", (e) => {
   mail.classList.toggle("openmail");
@@ -29,26 +30,6 @@ burgerReceive.addEventListener("click", (e) => {
 
 ourPortfolio.addEventListener("click", () => {
   portfolioSection.scrollIntoView({ behavior: "smooth" });
-});
-
-burgersMenu.addEventListener("click", (e) => {
-  const liMo = e.target.closest(".burger-menu-ul");
-  const content = e.target.firstChild.textContent.trim();
-  if (liMo && content === "Лэндинги") {
-    dropdownMobs.classList.toggle("dropdownmobAs");
-  }
-});
-
-burgersMenu.addEventListener("click", (e) => {
-  const liMo = e.target.closest(".burger-menu-ul");
-  const content = e.target.firstChild.textContent.trim();
-  if (liMo && content === "Страницы") {
-    dropdownMob.classList.toggle("dropdownmobA");
-  }
-
-  if (e.target.closest(".drop-down-item")) {
-    dropdownMob.classList.remove("dropdownmobA");
-  }
 });
 
 navMenu.addEventListener("click", (e) => {
@@ -73,6 +54,13 @@ triggerMenu.addEventListener("click", (e) => {
   burgerMenu.classList.toggle("active-menu");
   triggerMenu.classList.toggle("active-button");
   body.classList.toggle("lock");
+});
+
+closeBurger.addEventListener("click", () => {
+  burgerMenu.classList.remove("active-menu");
+  overlay.classList.remove("active");
+  body.classList.remove("lock");
+  triggerMenu.classList.remove("active-button");
 });
 
 openModal.addEventListener("click", (e) => {
