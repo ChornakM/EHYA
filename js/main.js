@@ -324,6 +324,10 @@ $(".form").each(function () {
         required: "Телефон деактивирован",
         minlenght: jQuery.validator.format("Требуется не менее 11 символов"),
       },
+      message: {
+        required: "Это поле не может быть пустым.",
+        minlenght: "Требуется не менее 10 символов.",
+      },
     },
   });
 }),

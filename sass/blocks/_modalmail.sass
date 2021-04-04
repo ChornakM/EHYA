@@ -10,13 +10,25 @@
     padding: 25px
     border-radius: 8px
     overflow: hidden
-    display: none 
+    display: none    
+    min-height: 50px
+    width: 100%
+    margin-top: 14px
     z-index: 15
     &-close
       position: absolute
       top: 15px
       right: 15px
       margin-bottom: 15px
+      cursor: pointer
+      &:hover
+        transform: scale(1.2)
+    &-logo
+      position: absolute
+      left: 18px
+      top: 16px
+      width: 60px
+      cursor: pointer
   &-email
     border-radius: 4px
     overflow: hidden
@@ -35,6 +47,10 @@
     border-radius: 12px
     cursor: pointer
     z-index: 9
+    &:hover
+      border: 1px solid $light
+      background: $titel-color
+      color: $light
 .openmail
   display: block
 .closemail

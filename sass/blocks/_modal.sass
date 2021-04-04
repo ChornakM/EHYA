@@ -38,6 +38,8 @@
     top: 17px
     text-decoration: none
     cursor: pointer
+    &:hover
+        transform: scale(1.2)
   &-titel
     font-style: normal
     font-weight: bold
@@ -76,6 +78,11 @@
     padding: 13px 52px 13px 52px
     border-radius: 12px
     cursor: pointer
+    background: $light
+    &:hover
+      border: 1px solid $light
+      background: $titel-color
+      color: $light
   &-info
     font-style: normal
     font-weight: bold
