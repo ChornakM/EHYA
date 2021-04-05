@@ -30,7 +30,6 @@ ourPortfolio.addEventListener("click", () => {
 navMenu.addEventListener("click", (e) => {
   const liM = e.target.closest(".button-mobile-hidden");
   const content = e.target.firstChild.textContent.trim();
-  console.log(content);
   if (liM && content === "Страницы") {
     dropdownsMob.classList.toggle("dropdownactive");
   }
@@ -80,10 +79,6 @@ burgerReceive.addEventListener("click", (e) => {
   windowModal.classList.toggle("visible");
   overlayModal.classList.toggle("visible");
   body.classList.toggle("lock");
-});
-
-overlay.addEventListener("click", (event) => {
-  console.log("asgerg");
 });
 
 const feedbackSlider = {
@@ -136,7 +131,6 @@ const runFeedbackSlider = (sliderSettings) => {
 
     slideIndex = 0;
     showDefaultNumberSlides(slides);
-    console.log(document.documentElement.clientWidth);
   });
 
   showDefaultNumberSlides(slides);
@@ -175,14 +169,12 @@ const runFeedbackSlider = (sliderSettings) => {
     if (target.closest(leftArrowClass)) {
       slideIndex--;
       sliderLimitations(slideIndex);
-      console.log(slideIndex);
       switchSlide(slideIndex);
     }
 
     if (target.closest(rightArrowClass)) {
       slideIndex++;
       sliderLimitations(slideIndex);
-      console.log(slideIndex);
       switchSlide(slideIndex);
     }
   });
@@ -201,6 +193,8 @@ const portfolioSlider = {
   sizeL: 3,
   sizeM: 2,
   sizeS: 1,
+  blackArrow: "url(../img/portfolio/right.svg)",
+  greyArrow: "url(../img/portfolio/grey2.svg)",
 };
 
 const runSlider = (sliderSettings) => {
@@ -208,6 +202,8 @@ const runSlider = (sliderSettings) => {
     sliderClass,
     slidesClass,
     leftArrowClass,
+    blackArrow,
+    greyArrow,
     rightArrowClass,
   } = sliderSettings;
 
@@ -240,9 +236,9 @@ const runSlider = (sliderSettings) => {
 
   window.addEventListener("resize", () => {
     rightArrow.disabled = false;
+    rightArrow.style.backgroundImage = blackArrow;
     slideIndex = 0;
     showDefaultNumberSlides(slides);
-    console.log(document.documentElement.clientWidth);
   });
 
   showDefaultNumberSlides(slides);
@@ -252,16 +248,20 @@ const runSlider = (sliderSettings) => {
 
     if (slide <= 0) {
       leftArrow.disabled = true;
+      leftArrow.style.backgroundImage = greyArrow;
       slideIndex = 0;
     } else {
       leftArrow.disabled = false;
+      leftArrow.style.backgroundImage = blackArrow;
     }
 
     if (slide >= maxSlideIndex) {
       rightArrow.disabled = true;
+      rightArrow.style.backgroundImage = greyArrow;
       slideIndex = maxSlideIndex;
     } else {
       rightArrow.disabled = false;
+      rightArrow.style.backgroundImage = blackArrow;
     }
   };
 
@@ -281,14 +281,12 @@ const runSlider = (sliderSettings) => {
     if (target.closest(leftArrowClass)) {
       slideIndex--;
       sliderLimitations(slideIndex);
-      console.log(slideIndex);
       switchSlide(slideIndex);
     }
 
     if (target.closest(rightArrowClass)) {
       slideIndex++;
       sliderLimitations(slideIndex);
-      console.log(slideIndex);
       switchSlide(slideIndex);
     }
   });

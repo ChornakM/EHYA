@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -264,6 +263,159 @@
       </div>
       <!-- /.container -->
     </footer>
-    <script src="js/main.js"></script>
+    <div class="overlay"></div>
+    <div class="burger-menu">
+      <img src="img/footer/Logo.svg" alt="logo" class="burger-menu-logo" />
+      <img src="img/lets/cloose.svg" alt="Close" class="burger-iclose" />
+      <ul class="burger-menu-ul">
+        <li class="burger-menu-item">
+          <a href="#" class="burger-menu-link">Домой </a>
+        </li>
+        <li class="burger-menu-item dropl">
+          <a href="#" class="burger-menu-link"
+            >Лэндинги
+            <img src="img/logo/down2.svg" alt="down2" class="button-down-img"
+          /></a>
+          <ul class="drop-down-mobs">
+            <li class="drop-down-item">
+              <a href="#" class="burger-menu-links">Партнери</a>
+            </li>
+            <li class="drop-down-item">
+              <a href="#" class="burger-menu-links">Портфолио</a>
+            </li>
+            <li class="drop-down-item">
+              <a href="#" class="burger-menu-links">Галерея</a>
+            </li>
+          </ul>
+        </li>
+        <li class="burger-menu-item downms">
+          <a href="#" class="burger-menu-link"
+            >Страницы
+            <img src="img/logo/down2.svg" alt="down2" class="button-down-img"
+          /></a>
+          <ul class="drop-down-mob">
+            <li class="drop-down-item">
+              <a href="#" class="burger-menu-links">Галерея</a>
+            </li>
+            <li class="drop-down-item">
+              <a href="#" class="burger-menu-links">Портфолио</a>
+            </li>
+            <li class="drop-down-item">
+              <a href="#" class="burger-menu-links">Партнери</a>
+            </li>
+          </ul>
+        </li>
+        <li class="burger-menu-item">
+          <a href="#" class="burger-menu-link">Помощь</a>
+        </li>
+      </ul>
+      <button class="burger-menu-button button-mail">Получить</button>
+      <div class="line"></div>
+      <div class="burger-menu-socials">
+        <a
+          href="https://www.google.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/google.svg"
+            alt="Icon:Google"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://twitter.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/twitter.svg"
+            alt="Icon: Twitter"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/instagram.svg"
+            alt="Icon: Instagram"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/"
+          class="burger-menu-social"
+          target="_blank"
+        >
+          <img
+            src="img/footer/linkedin.svg"
+            alt="Icon:linkedin"
+            class="burger-menu-icon"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/"
+          class="burger-menu-link"
+          target="_blank"
+        >
+          <img
+            src="img/footer/youtube.svg"
+            alt="Icon:Youtube"
+            class="burger-menu-icon"
+          />
+        </a>
+      </div>
+      <!-- /.footer-logo-icons -->
+    </div>
+    <div class="modal-overlay"></div>
+    <div class="modal-dialog">
+      <a href="index.html" class="modal-logo"
+        ><img src="img/footer/Logo.svg" alt="logo"
+      /></a>
+      <img src="img/lets/cloose.svg" alt="Icon: Close" class="modal-close" />
+      <div class="modal-contact-form">
+        <h3 class="modal-titel">Пообщаемся?</h3>
+        <form action="send.php" method="POST" class="modal-foorm form">
+          <input
+            type="text"
+            class="input modal-input"
+            placeholder="Ваше полное имя*"
+            name="name"
+            required
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal-input"
+            placeholder="Номер телефона*"
+            name="phone"
+            required
+            id="phonex"
+          />
+          <input
+            type="email"
+            class="input modal-input"
+            placeholder="Email*"
+            name="email"
+            required
+          />
+          <textarea
+            class="message modal-message"
+            cols="30"
+            rows="10"
+            placeholder="Отправьте нам свой бриф и расскажите о своем проекте.* "
+            name="message"
+            required
+          ></textarea>
+          <div class="info">
+            <button class="modal-button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/thank.js"></script>
   </body>
 </html>
