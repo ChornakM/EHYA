@@ -23,11 +23,6 @@ const portfolioSection = document.querySelector(".portfolio");
 const burgerReceive = document.querySelector(".burger-menu-button");
 const closeBurger = document.querySelector(".burger-iclose");
 
-burgerReceive.addEventListener("click", (e) => {
-  mail.classList.toggle("openmail");
-  body.classList.toggle("lock");
-});
-
 ourPortfolio.addEventListener("click", () => {
   portfolioSection.scrollIntoView({ behavior: "smooth" });
 });
@@ -76,13 +71,15 @@ windowClosse.addEventListener("click", (e) => {
 });
 
 receive.addEventListener("click", (e) => {
-  mail.classList.toggle("openmail");
+  windowModal.classList.toggle("visible");
+  overlayModal.classList.toggle("visible");
   body.classList.toggle("lock");
 });
 
-mailClosses.addEventListener("click", (e) => {
-  mail.classList.remove("openmail");
-  document.body.classList.remove("lock");
+burgerReceive.addEventListener("click", (e) => {
+  windowModal.classList.toggle("visible");
+  overlayModal.classList.toggle("visible");
+  body.classList.toggle("lock");
 });
 
 overlay.addEventListener("click", (event) => {

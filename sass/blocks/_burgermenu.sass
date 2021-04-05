@@ -8,7 +8,7 @@
   height: 100vh
   background-color: #000
   opacity: 0.6
-  z-index: 1
+  z-index: 11
   display: none
 .burger-menu
     position: absolute
@@ -37,6 +37,13 @@
       line-height: 33px
       align-items: center
       color: #fff
+    &-links
+      cursor: pointer
+      text-decoration: none
+      font-style: normal
+      font-weight: bold
+      align-items: center
+      color: $titel-color
     &-item
       margin-bottom: 50px 
     &-socials
@@ -61,6 +68,7 @@
       outline: none
       cursor: pointer
       margin-left: 92px 
+    
 .dropl
   &:hover
     .drop-down-mobs
