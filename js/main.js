@@ -193,8 +193,8 @@ const portfolioSlider = {
   sizeL: 3,
   sizeM: 2,
   sizeS: 1,
-  blackArrow: "url(../img/portfolio/right.svg)",
-  greyArrow: "url(../img/portfolio/grey2.svg)",
+  blackArrow: "url(./img/portfolio/right.svg)",
+  greyArrow: "url(./img/portfolio/grey.svg)",
 };
 
 const runSlider = (sliderSettings) => {
@@ -310,10 +310,8 @@ $(".form").each(function () {
         minlength: "Имя должно состоять не менее чем из 2 букв.",
       },
       email: {
-        required:
-          "Нам нужен ваш адрес электронной почты, чтобы с вами связаться",
-        email:
-          "Ваш адрес электронной почты должен быть в формате name@domain.com.",
+        required: "Введите ваш e-mail",
+        email: "Введите ваш e-mail в формате name@domain.com.",
       },
       phone: {
         required: "Телефон деактивирован",
